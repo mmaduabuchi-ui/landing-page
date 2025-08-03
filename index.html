@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ✅ NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <h1 class="text-xl font-bold text-gray-800">Mmaduabuchi Ogu</h1>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#hero" class="text-gray-700 hover:text-blue-600">Home</a>
+        <a href="#services" class="text-gray-700 hover:text-blue-600">Services</a>
+        <a href="#portfolio" class="text-gray-700 hover:text-blue-600">Portfolio</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="menu" class="hidden flex-col bg-white shadow-md px-6 py-4 md:hidden">
+      <a href="#hero" class="block py-2 hover:text-blue-600">Home</a>
+      <a href="#services" class="block py-2 hover:text-blue-600">Services</a>
+      <a href="#portfolio" class="block py-2 hover:text-blue-600">Portfolio</a>
+      <a href="#contact" class="block py-2 hover:text-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("menu").classList.toggle("hidden");
+    });
+  </script>
+
+  <!-- ✅ HERO SECTION -->
+  <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Mmaduabuchi Ogu</h1>
+    <p class="mt-4 text-lg md:text-xl text-gray-600">
+      Building Websites & Sales Apps for Businesses & Schools
+    </p>
+    <a href="#contact"
+       class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-xl shadow-md hover:bg-blue-700 transition">
+      Get a Free Demo
+    </a>
+  </section>
+
+  <!-- ✅ SERVICES SECTION -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10">What I Offer</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <div class="text-blue-600 text-5xl mb-4">🌐</div>
+          <h3 class="text-xl font-semibold mb-2">Websites</h3>
+          <p class="text-gray-600">Professional and responsive websites tailored for your business or personal brand.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <div class="text-green-600 text-5xl mb-4">💳</div>
+          <h3 class="text-xl font-semibold mb-2">POS Systems</h3>
+          <p class="text-gray-600">Easy-to-use point of sale solutions to manage sales and inventory efficiently.</p>
+        </div>
+        <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <div class="text-purple-600 text-5xl mb-4">🏫</div>
+          <h3 class="text-xl font-semibold mb-2">School Portals</h3>
+          <p class="text-gray-600">Custom portals for schools to manage students, results, and communications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ PORTFOLIO SECTION -->
+  <section id="portfolio" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10">My Portfolio</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="https://via.placeholder.com/300x200" class="rounded-lg mb-4 w-full" alt="Project 1">
+          <h3 class="text-xl font-semibold mb-2">Business Website</h3>
+          <p class="text-gray-600 mb-3">A modern responsive business website.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Live Demo →</a>
+        </div>
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="https://via.placeholder.com/300x200" class="rounded-lg mb-4 w-full" alt="Project 2">
+          <h3 class="text-xl font-semibold mb-2">POS Dashboard</h3>
+          <p class="text-gray-600 mb-3">A simple POS system with analytics.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Live Demo →</a>
+        </div>
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="https://via.placeholder.com/300x200" class="rounded-lg mb-4 w-full" alt="Project 3">
+          <h3 class="text-xl font-semibold mb-2">School Portal</h3>
+          <p class="text-gray-600 mb-3">Portal for managing students and results.</p>
+          <a href="#" class="text-blue-600 font-semibold hover:underline">Live Demo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">Contact Me</h2>
+
+      <div class="flex justify-center gap-4 mb-8">
+        <a href="https://wa.me/2348063100974" target="_blank"
+           class="px-6 py-3 bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition">
+          WhatsApp Me
+        </a>
+        <a href="mailto:mmaduabuchiogu4@gmail.com"
+           class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+          Send Email
+        </a>
+      </div>
+
+      <form class="bg-gray-50 p-6 rounded-xl shadow max-w-lg mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full mb-3 p-3 border rounded-lg" required>
+        <input type="email" placeholder="Your Email" class="w-full mb-3 p-3 border rounded-lg" required>
+        <textarea placeholder="Your Message" class="w-full mb-3 p-3 border rounded-lg" rows="4" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>© 2025 Mmaduabuchi Ogu. All rights reserved.</p>
+    <div class="mt-3 flex justify-center gap-4">
+      <a href="https://wa.me/2348063100974" class="hover:text-green-400">WhatsApp</a>
+      <a href="mailto:mmaduabuchiogu4@gmail.com" class="hover:text-blue-400">Email</a>
+      <a href="#" class="hover:text-gray-400">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
